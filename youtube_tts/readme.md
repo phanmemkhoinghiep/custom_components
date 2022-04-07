@@ -1,4 +1,4 @@
-Service TTS Phát bài hát youtube dựa trên từ khóa
+Service TTS cho phép phát bài hát youtube dựa trên từ khóa
 
 Khai báo trong configuration.yaml như sau:
 
