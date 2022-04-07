@@ -1,0 +1,19 @@
+{
+  "domain": "youtube_tts",
+  "name": "YOUTUBE TTS",
+  "version": "1.0",
+  "documentation": "https://github.com/phanmemkhoinghiep/homeassistant/new/master/custom_components/tts_zalo",
+  "dependencies": [],
+"codeowners": ["Nguyễn Duy: phanmemkhoinghiep"],
+  "requirements": [],
+  "iot_class": "cloud_polling",
+  "updater": {
+    "version": "1.0",
+    "releaseNotes": "-- Add manifest file",
+    "files": [
+      "__init__.py",
+      "manifest.json",
+      "services.yaml"
+    ]
+  }
+}
