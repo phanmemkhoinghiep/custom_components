@@ -1,6 +1,14 @@
-Phát bài hát youtube dựa trên từ khóa
+Service TTS Phát bài hát youtube dựa trên từ khóa
 
 Khai báo trong configuration.yaml như sau:
+
+```sh
+
+youtube_tts:
+
+media_extractor:
+```   
+Khai báo gọi dịch vụ như sau:
 
 ```sh
 service: youtube_tts.say
