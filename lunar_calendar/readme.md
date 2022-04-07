@@ -1,4 +1,5 @@
 Sensor lịch âm
+
 Khai báo trong configuration.yaml như sau:
 
 ```sh
