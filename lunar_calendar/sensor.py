@@ -15,15 +15,12 @@ name = ''
 SENSOR_TYPES = {
     'lunarDay': ['Ngày âm ', 'mdi:calendar-month'],
     'lunarMonth': ['Tháng âm ', 'mdi:calendar-month']
-    # 'isSpecialDay': ['Là ngày đặc biệt ', 'mdi:calendar-month'],
-    # 'specialDayName': ['Tên ngày đặc biệt ', 'mdi:calendar-plus']
 }
 DEFAULT_TYPE_ = 'lunarDay'
 
 SCAN_INTERVAL = datetime.timedelta(seconds=3600)  # 1 hour
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
-    # vol.Required(CONF_NAME): cv.string,
     vol.Optional(CONF_NAME, default={CONF_TYPE: name}): cv.string,
     vol.Optional(CONF_DISPLAY_OPTIONS, default={CONF_TYPE: DEFAULT_TYPE_}):
         vol.All(
@@ -35,9 +32,6 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
     """Set up the system monitor sensors."""
     global name
     devices = []
-    # specialDay[] = config.get(CONF_SPECIALDAY)     
-    # specialMonth[] = config.get(CONF_SPECIALMONTH)     
-    # specialName[] = config.get(CONF_SPECIALNAME)    
     for variable in config[CONF_DISPLAY_OPTIONS]:
         device = lunar_calendar_class(variable)
         devices.append(device)
@@ -74,8 +68,6 @@ class lunar_calendar_class(Entity):
 
     @Throttle(SCAN_INTERVAL)
     def update(self):
-        # global customerId
-        # _LOGGER.debug('Ma khach hang: ' + customerId)
         data = getData()
         if self.type == 'lunarDay':
             self._state = data[0]
