@@ -2,7 +2,7 @@
   "domain": "youtube_tts",
   "name": "YOUTUBE TTS",
   "version": "1.0",
-  "documentation": "https://github.com/phanmemkhoinghiep/homeassistant/new/master/custom_components/tts_zalo",
+  "documentation": "https://github.com/phanmemkhoinghiep/homeassistant/new/master/custom_components/vov_tts",
   "dependencies": [],
 "codeowners": ["Nguyễn Duy: phanmemkhoinghiep"],
   "requirements": [],
