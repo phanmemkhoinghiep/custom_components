@@ -16,7 +16,6 @@ CONF_MESSAGE = 'message'
 
 
 def setup(hass, config):
-
     def tts_handler(data_call):
         # Get config
         # api_key = str(config[DOMAIN][CONF_API_KEY])      
@@ -34,7 +33,6 @@ def setup(hass, config):
             resp = requests.get(songUrl)
             # print(resp.text)
             key = re.findall('data-xml="\/media\/get-source\?type=audio&key=([a-zA-Z0-9]{20,35})', resp.text)
-            # key = re.findall('data-xml="\/media\/get-source\?type=video&key=([a-zA-Z0-9]{20,35})', resp.text)
             songApiUrl = "https://mp3.zing.vn/xhr/media/get-source?type=audio&key="+key[0]
             resp = requests.get(songApiUrl)
             resultJson = json.dumps(resp.json())
