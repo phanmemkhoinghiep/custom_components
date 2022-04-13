@@ -81,7 +81,7 @@ def setup(hass, config):
             # Convert audio string to audio byte
             audio_byte = base64.b64decode(audio_string[3])
             # Open audio file
-            audio_file = open(filename, 'wb')
+            audio_file = open(file_name, 'wb')
             # Write audio byte to file
             audio_file.write(audio_byte)
             audio_file.close()        
