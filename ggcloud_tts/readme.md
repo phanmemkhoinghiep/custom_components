@@ -48,9 +48,9 @@ the api will be
 ```sh
 03AGdBq27QjGOUzzA33Xye3C4mpOK7xnEblcNFBDMHXbzP6X1IRtD_TtT0fKsXRQzpzkQF0JpKxaLRsVcY-NdHWO6XOlV0ZjQCCVMzHsGwk_PHgQVMEiwn-C8YI_BfN3H7kWfw-6HdY0j2TVWD-lPZz5l_hS8sL2hdr3XAP7O0p-Wd7t4r2ggnBtq-e9cYN1laVPBt12oxWHTOhLGn9UlRUQX03O-I7BF2nDlpkLWqhbKO9a9kPfqSfJsa6wOZgy1fQxAvd9fhf3hwwJuQ1KNZaCb6U7pv6FBepyoJtvst8-gyzIJ8QgF8bBUAVmQJ3rB6tWauGK3yRFihaSUdxy8mLdutmCkZ7M6DxNtG-KiVC-08lb2sJM7prZnX7RwSQh8ZLxpfI9cjcNsg5KFEJD22qbIO4aFI3t981R_JPt2j7Q3IHFGCqZEzy6ibdbM0xrRkZtTPX8i7uyAxXZ7dxuWQeu-NanquwMHR7g
 ```
+Write down it to use at Step 3
 
-
-### STEP3. Configure these TTS Component
+### STEP3. Configure Google Cloud TTS Component
 
 3.1. Create folder name tts at local home assistant: www/tts
 
