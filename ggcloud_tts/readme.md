@@ -12,7 +12,7 @@ This is step by step guide to intergrated Google Cloud TTS Component to your Hom
 
 Follow this guide: https://support.google.com/googleapi/answer/6158862?hl=en
 
-2.2. Free API:
+2.2. Get Free API:
 
 2.2.1.
 Access this page by Google Chrome
