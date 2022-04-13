@@ -1,5 +1,5 @@
 #Hello
-This is step by step guide to intergrated this TTS Component to your Home Assistant
+This is step by step guide to intergrated Google Cloud TTS Component to your Home Assistant
 
 ### STEP1. Download to your Home Assistant Custom_Component Folder
 
