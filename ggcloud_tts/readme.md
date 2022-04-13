@@ -79,5 +79,6 @@ script:
         pitch: '0' #May be from your input_number
         language: "vi-VN" #May be from your input_select
         voice_name: "Google_Voice_1"' #May be from your input_select
+        re_use: True #Set True if the message is clean text, set False if the message contains specical characters that not have permission in file name
 ```
 ### STEP5.  Enjoy with the TTS voice
