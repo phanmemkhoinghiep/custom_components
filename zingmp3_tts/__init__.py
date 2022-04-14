@@ -27,7 +27,7 @@ def setup(hass, config):
             resp = requests.get('http://ac.mp3.zing.vn/complete/desktop?type=song&query='+urllib.parse.quote(message))
             resultJson = json.dumps(resp.json())
             obj = json.loads(resultJson)
-            songID = obj["data"][0]['song'][0]['id']
+            songID = obj["data"][1]['song'][0]['id']
             songUrl= "https://mp3.zing.vn/bai-hat/"+songID+".html"
             # print(songUrl)
             resp = requests.get(songUrl)
