@@ -11,15 +11,15 @@ DOMAIN = 'ggcloud_tts'
 SERVICE_GGCLOUD_TTS = 'say'
 # config
 CONF_TOKEN = 'token'
+CONF_URL_HASS = 'url'
+# data service
 CONF_SPEED = 'speed'
 CONF_PITCH = 'pitch'
-CONF_RE_USE = 're_use'
-CONF_URL_HASS = 'url'
-CONF_LANGUAGE_CODE ='language'
-# data service
 CONF_PLAYER_ID = 'entity_id'
 CONF_MESSAGE = 'message'
 CONF_VOICE_NAME = 'voice_name'
+CONF_LANGUAGE_CODE ='language'
+CONF_RE_USE = 're_use'
 # audio file path
 CONF_FILE_PATH = '/config/www/tts/'
 CONF_AUDIO_PATH = '/local/tts/'
