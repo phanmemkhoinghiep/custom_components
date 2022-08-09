@@ -10,7 +10,7 @@ This is a example how to use this service
 script:
   viettel_reading_08:
     sequence:  
-    - service: viettel_tts.say
+    - service: tts_viettel.say
       data_template:
         entity_id: media_player.note4    
         message: "{{ Your text here }}
