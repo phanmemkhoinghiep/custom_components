@@ -1,0 +1,19 @@
+{
+  "domain": "viettel_tts",
+  "name": "VIETTEL TTS",
+  "version": "1.0",
+  "documentation": "https://github.com/phanmemkhoinghiep/custom_components/viettel_tts",
+  "dependencies": [],
+"codeowners": ["Nguyễn Duy"],
+  "requirements": [],
+  "iot_class": "cloud_polling",
+  "updater": {
+    "version": "1.1",
+    "releaseNotes": "-- Add manifest file",
+    "files": [
+      "__init__.py",
+      "manifest.json",
+      "services.yaml"
+    ]
+  }
+}
