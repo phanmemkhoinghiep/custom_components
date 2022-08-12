@@ -1,11 +1,31 @@
-Register Free Viettel TTS Account and get Token at: https://viettelgroup.ai/en
-
-We need create a folder with name is tts in your homeassistant local folder to store tts file (/config/www/tts)
-
 Develop based on Python orignal source code at: https://viettelgroup.ai/document/tts
 
+#Hello
+This is step by step guide to intergrated these TTS Component to your Home Assistant
 
-This is a example how to use this service
+### STEP1. Download to your Home Assistant Custom_Component Folder
+
+1.1. git clone or copy row file to your Home Assistant Custom_Component Folder
+
+### STEP2. Register and get Free Token/API from STT engines
+
+2.1. Register Free Viettel TTS Account and get Token at: https://viettelgroup.ai/en
+
+### STEP3. Configure these TTS Component
+
+3.1. Create folder name tts at local home assistant: www/tts
+
+3.2. Configure the API in your configuration.yaml
+
+3.2.1. Configure Example for Viettel TTS
+```sh
+#TTS of Vietnamese Viettel TTS
+tts_viettel:
+ token: 'your Viettel Token' 
+   #See in the /custom_components/tts_viettel/readme.txt for more detail how to create Viettel API
+ url: 'your hass base URL'
+ ```
+3.2.2. This is a example how to use this service
 
 script:
   viettel_reading_08:
