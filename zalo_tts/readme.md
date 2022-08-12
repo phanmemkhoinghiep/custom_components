@@ -14,7 +14,7 @@ Follow this guide: https://zalo.ai/user-profile
 
 2.2. Write down the API:
 
-### STEP3. Configure Google Cloud TTS Component
+### STEP3. Configure ZaLo TTS Component
 
 3.1. Create folder name tts at local home assistant: www/tts
 
