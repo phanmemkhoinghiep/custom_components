@@ -40,7 +40,7 @@ def setup(hass, config):
             # print(str(obj))
             mp3_link = str(obj["data"]["source"]["128"])            
             # service data for 'CALL SERVICE' in Home Assistant
-            service_data = {'entity_id': media_id, 'media_content_id': mp3_link, 'media_content_type': 'audio/mp3'}
+            service_data = {'entity_id': media_id, 'media_content_id': mp3_link, 'media_content_type': 'music'}
             # Call service from Home Assistant
             hass.services.call('media_extractor', 'play_media', service_data)
         except (IndexError, ValueError):
