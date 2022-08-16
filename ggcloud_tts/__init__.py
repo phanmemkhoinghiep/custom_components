@@ -87,7 +87,7 @@ def setup(hass, config):
             audio_file.close()        
         # Play audio file with Home Assistant Service#  
         # service data for 'CALL SERVICE' in Home Assistant
-        service_data = {'entity_id': media_id, 'media_content_id': file_url, 'media_content_type': 'audio/mp3'}
+        service_data = {'entity_id': media_id, 'media_content_id': file_url, 'media_content_type': 'music'}
         # Call service from Home Assistant
         hass.services.call('media_extractor', 'play_media', service_data)
     hass.services.register(DOMAIN, SERVICE_GGCLOUD_TTS, tts_handler)
