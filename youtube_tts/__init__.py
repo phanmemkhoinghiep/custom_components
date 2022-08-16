@@ -32,7 +32,7 @@ def setup(hass, config):
             payload = response.json()
             song_url=payload['answer_link']
             # service data for 'CALL SERVICE' in Home Assistant
-            service_data = {'entity_id': media_id, 'media_content_id': song_url, 'media_content_type': 'audio/mp3'}
+            service_data = {'entity_id': media_id, 'media_content_id': song_url, 'media_content_type': 'music'}
             # Call service from Home Assistant
             hass.services.call('media_extractor', 'play_media', service_data)
         except:
