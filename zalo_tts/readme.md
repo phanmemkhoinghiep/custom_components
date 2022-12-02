@@ -21,6 +21,8 @@ Follow this guide: https://zalo.ai/user-profile
 3.2. Configure the API in your configuration.yaml
 
 ```sh
+media_extractor:
+```  
 #Zalo TTS
 zalo_tts:
  token: 'your ZALO API at Step 2' 
