@@ -43,7 +43,7 @@ def setup(hass, config):
                 #HTTP Request
                 url = 'https://api.zalo.ai/v1/tts/synthesize'
                 #Header Parameters
-                header_parameters = {'apikey': apikey}
+                header_parameters = {'apikey': token}
                 # Body Parameters
                 data = {'input': message.encode('utf-8'), 'speed': speed, 'encoder_type': encode_type,'speaker_id': speaker_id}
                 #Get respounse from Server  
