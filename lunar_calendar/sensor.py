@@ -80,12 +80,12 @@ def getData():
     lunarMonth=1
     url = "http://vietbot.xyz:5000/api"
     headers = {'Content-Type': 'application/json; charset=utf-8'}
-    payload = {'data': 'hôm nay âm lịch là mồng mấy', 'smh_url':'fdfd', 'smh_token1': 'sfsdfsd', 'smh_name':'hass','private_location':'105.804817,21.028511'}
+    payload1 = {'data': 'hôm nay âm lịch là mồng mấy'}
     try:
-        response = requests.post(url, headers=headers, data= json.dumps(payload))
+        response = requests.post(url, headers=headers, data= json.dumps(payload1))
         # print(str(response.json()))
-        payload = response.json()
-        answer_text=payload['answer_text']
+        payload2 = response.json()
+        answer_text=payload2['answer_text']
         if 'mùng' in answer_text:
             lunarDay=int(answer_text.split(' là ')[1].split(' tháng ')[0].split('mùng ')[1])
         else:
@@ -97,4 +97,3 @@ def getData():
     except:
         pass
     return lunarDay, lunarMonth
-
