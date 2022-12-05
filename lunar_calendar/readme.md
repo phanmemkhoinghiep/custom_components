@@ -9,4 +9,7 @@ sensor:
     display_options:
       - lunarDay
       - lunarMonth
+      - lunarYear       
+      - firstMonth      
+      - fullMonth                       
 ```      
