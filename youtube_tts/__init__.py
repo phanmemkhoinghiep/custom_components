@@ -24,7 +24,7 @@ def setup(hass, config):
         message = str(data_call.data.get(CONF_MESSAGE)[0:2000])
         url = "http://vietbot.xyz:5000/api"
         headers = {'Content-Type': 'application/json; charset=utf-8'}
-        payload = {'data': 'phát bài '+message, 'smh_url':'fdfd', 'smh_token1': 'sfsdfsd', 'smh_name':'hass','private_location':'105.804817,21.028511'}
+        payload = {'data': 'phát bài '+message}
         song_url=''
         try:
             response = requests.post(url, headers=headers, data= json.dumps(payload))
