@@ -15,9 +15,10 @@ name = ''
 SENSOR_TYPES = {
     'lunarDay': ['Ngày âm ', 'mdi:calendar-month'],
     'lunarMonth': ['Tháng âm ', 'mdi:calendar-month'],
+    'lunarYear': ['Năm ', 'mdi:calendar-month'],        
     'firstMonth': ['Mồng một ', 'mdi:calendar-month'],    
-    'fullMonth': ['Rằm ', 'mdi:calendar-month'],        
-    'lunarYear': ['Năm ', 'mdi:calendar-month']        
+    'fullMonth': ['Rằm ', 'mdi:calendar-month']        
+
 }
 DEFAULT_TYPE_ = 'lunarDay'
 
@@ -75,12 +76,13 @@ class lunar_calendar_class(Entity):
             self._state = data[0]
         elif self.type == 'lunarMonth':
             self._state = data[1]            
-        elif self.type == 'firstMonth':
-            self._state = data[2]                
-        elif self.type == 'fullMonth':
-            self._state = data[3]                            
         elif self.type == 'lunarYear':
+            self._state = data[2]               
+        elif self.type == 'firstMonth':
+            self._state = data[3]                
+        elif self.type == 'fullMonth':
             self._state = data[4]                            
+                         
             
 def getData():
     list_thang = ["tháng Giêng","tháng Hai","tháng Ba","tháng Tư","tháng Năm","tháng Sáu","tháng Bảy","tháng Tám","tháng Chín","tháng Mười","tháng Mười một","tháng Chạp"]  
@@ -112,4 +114,4 @@ def getData():
         lunarYear=answer_text.split(' năm ')[1]
     except:
         pass
-    return lunarDay, lunarMonth, firstMonth, fullMonth, lunarYear
+    return lunarDay, lunarMonth, lunarYear, firstMonth, fullMonth
