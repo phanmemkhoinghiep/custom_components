@@ -88,9 +88,9 @@ def getData():
     list_thang = ["tháng Giêng","tháng Hai","tháng Ba","tháng Tư","tháng Năm","tháng Sáu","tháng Bảy","tháng Tám","tháng Chín","tháng Mười","tháng Mười một","tháng Chạp"]  
     lunarDay=1
     lunarMonth=1
+    lunarYear=''
     firstMonth=False
     fullMonth=False
-    lunarYear=''
     url = "http://vietbot.xyz:5000/api"
     headers = {'Content-Type': 'application/json; charset=utf-8'}
     payload1 = {'data': 'hôm nay âm lịch là mồng mấy'}
@@ -99,19 +99,23 @@ def getData():
         # print(str(response.json()))
         payload2 = response.json()
         answer_text=payload2['answer_text']
+        lunarYear=answer_text.split(' năm ')[1]
         if 'mùng' in answer_text:
-            lunarDay=int(answer_text.split(' là ')[1].split(' tháng ')[0].split('mùng ')[1])
-            if lunarDay==1:
+            if 'mùng một' in answer_text:
                 firstMonth=True                
+                lunarDay=1
+            else:
+                lunarDay=int(answer_text.split(' là ')[1].split(' tháng ')[0].split('mùng ')[1])
         else:
-            lunarDay=int(answer_text.split(' là ')[1].split(' tháng ')[0])
-            if lunarDay==15:
+            if 'rằm' in answer_text:
                 fullMonth=True
+                lunarDay=15
+            else:
+                lunarDay=int(answer_text.split(' là ')[1].split(' tháng ')[0])            
         for i in range(len(list_thang)):
             if list_thang[i] == 'tháng '+ answer_text.split(' tháng ')[1].split(' năm ')[0]:
                 lunarMonth=i+1
                 break       
-        lunarYear=answer_text.split(' năm ')[1]
     except:
         pass
     return lunarDay, lunarMonth, lunarYear, firstMonth, fullMonth
