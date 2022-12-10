@@ -20,9 +20,9 @@ This is step by step guide to intergrated these TTS Component to your Home Assis
 3.2.1. Configure Example for Viettel TTS
 ```sh
 #TTS of Vietnamese Viettel TTS
-tts_viettel:
+viettel_tts:
  token: 'your Viettel Token' 
-   #See in the /custom_components/tts_viettel/readme.txt for more detail how to create Viettel API
+   #See in the /custom_components/viettel_tts/readme.txt for more detail how to create Viettel API
  url: 'your hass base URL'
  ```
 3.2.2. This is a example how to use this service
