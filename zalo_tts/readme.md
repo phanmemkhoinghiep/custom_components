@@ -23,6 +23,8 @@ Follow this guide: https://zalo.ai/user-profile
 ```sh
 media_extractor:
 ```  
+
+```sh
 #Zalo TTS
 zalo_tts:
  token: 'your ZALO API at Step 2' 
