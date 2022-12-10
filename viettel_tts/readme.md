@@ -30,7 +30,7 @@ viettel_tts:
 script:
   viettel_reading_08:
     sequence:  
-    - service: tts_viettel.say
+    - service: viettel_tts.say
       data_template:
         entity_id: media_player.note4    
         message: "{{ Your text here }}
