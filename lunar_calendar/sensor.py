@@ -18,7 +18,7 @@ SENSOR_TYPES = {
     'lunarYear': ['Năm ', 'mdi:calendar-month'],        
     'firstMonth': ['Mồng một ', 'mdi:calendar-month'],    
     'fullMonth': ['Rằm ', 'mdi:calendar-month'],        
-    'dayLeft': ['Còn lại', 'mdi:calendar-month']        
+    'dayLeft': ['Ngày còn lại tới Rằm', 'mdi:calendar-month']        
 }
 DEFAULT_TYPE_ = 'lunarDay'
 
