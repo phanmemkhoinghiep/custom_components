@@ -18,7 +18,8 @@ SENSOR_TYPES = {
     'lunarYear': ['Năm ', 'mdi:calendar-month'],        
     'firstMonth': ['Mồng một ', 'mdi:calendar-month'],    
     'fullMonth': ['Rằm ', 'mdi:calendar-month'],        
-    'dayLeft': ['Ngày còn lại tới Rằm', 'mdi:calendar-month']        
+    'dayLeft1': ['Ngày còn lại tới mồng một', 'mdi:calendar-month'],        
+    'dayLeft2': ['Ngày còn lại tới rằm', 'mdi:calendar-month']            
 }
 DEFAULT_TYPE_ = 'lunarDay'
 
@@ -82,9 +83,10 @@ class lunar_calendar_class(Entity):
             self._state = data[3]                
         elif self.type == 'fullMonth':
             self._state = data[4]                            
-        elif self.type == 'dayLeft':
+        elif self.type == 'dayLeft1':
             self._state = data[5]                                
-            
+        elif self.type == 'dayLeft2':
+            self._state = data[6]                                            
 def getData():
     list_thang = ["tháng Giêng","tháng Hai","tháng Ba","tháng Tư","tháng Năm","tháng Sáu","tháng Bảy","tháng Tám","tháng Chín","tháng Mười","tháng Mười một","tháng Chạp"]  
     lunarDay=1
@@ -92,7 +94,8 @@ def getData():
     lunarYear=''
     firstMonth=False
     fullMonth=False
-    dayLeft=0    
+    dayLeft1=0    
+    dayLeft2=0    
     url = "http://vietbot.xyz:5000/api"
     headers = {'Content-Type': 'application/json; charset=utf-8'}
     payload1 = {'data': 'hôm nay âm lịch là mồng mấy'}
@@ -102,25 +105,30 @@ def getData():
         payload2 = response.json()
         answer_text=payload2['answer_text']
         lunarYear=answer_text.split(' năm ')[1].split('.')[0]
-        dayLeft=int(answer_text.split(' năm ')[1].split('.')[1].split(' Còn ')[1].split(' ngày ')[0])        
         if 'mùng' in answer_text:
             if 'mùng một' in answer_text:
                 firstMonth=True                
                 lunarDay=1
-                dayLeft=0           
+                dayLeft1=0
+                dayLeft2=14                
             else:
                 lunarDay=int(answer_text.split(' là ')[1].split(' tháng ')[0].split('mùng ')[1])
+                dayLeft1=lunarDay-1
+                dayLeft2=15-lunarDay              
         else:
             if 'rằm' in answer_text:
                 fullMonth=True
                 lunarDay=15
-                dayLeft=0                           
+                dayLeft1='unknown'
+                dayLeft2=0                           
             else:
-                lunarDay=int(answer_text.split(' là ')[1].split(' tháng ')[0])            
+                lunarDay=int(answer_text.split(' là ')[1].split(' tháng ')[0])           
+                dayLeft1='unknown'
+                dayLeft2='unknown'
         for i in range(len(list_thang)):
             if list_thang[i] == 'tháng '+ answer_text.split(' tháng ')[1].split(' năm ')[0]:
                 lunarMonth=i+1
                 break       
     except:
         pass
-    return lunarDay, lunarMonth, lunarYear, firstMonth, fullMonth, dayLeft
+    return lunarDay, lunarMonth, lunarYear, firstMonth, fullMonth, dayLeft1, dayLeft2
