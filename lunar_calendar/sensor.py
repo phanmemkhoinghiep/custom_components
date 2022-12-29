@@ -102,7 +102,7 @@ def getData():
         payload2 = response.json()
         answer_text=payload2['answer_text']
         lunarYear=answer_text.split(' năm ')[1].split('.')[0]
-        dayLeft=answer_text.split(' năm ')[1].split('.')[1].split(' Còn ')[1].split(' ngày ')[0]        
+        dayLeft=int(answer_text.split(' năm ')[1].split('.')[1].split(' Còn ')[1].split(' ngày ')[0])        
         if 'mùng' in answer_text:
             if 'mùng một' in answer_text:
                 firstMonth=True                
