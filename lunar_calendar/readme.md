@@ -12,5 +12,6 @@ sensor:
       - lunarYear       
       - firstMonth      
       - fullMonth            
-      - dayLeft                  
+      - dayLeft1                  
+      - dayLeft2                        
 ```      
