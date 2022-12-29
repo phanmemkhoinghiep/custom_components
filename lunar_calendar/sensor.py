@@ -113,7 +113,7 @@ def getData():
                 dayLeft2=14                
             else:
                 lunarDay=int(answer_text.split(' là ')[1].split(' tháng ')[0].split('mùng ')[1])
-                dayLeft1=lunarDay-1
+                dayLeft1='unknown'
                 dayLeft2=15-lunarDay              
         else:
             if 'rằm' in answer_text:
