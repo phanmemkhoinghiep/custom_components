@@ -96,7 +96,7 @@ def getData():
     fullMonth=False
     dayLeft1=0    
     dayLeft2=0    
-    url = "http://vietbot.xyz:5000/api"
+    url = "http://vietbot.vn:5000/api"
     headers = {'Content-Type': 'application/json; charset=utf-8'}
     payload1 = {'data': 'hôm nay âm lịch là mồng mấy'}
     try:
