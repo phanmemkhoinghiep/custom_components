@@ -27,6 +27,7 @@ viettel_tts:
  ```
 3.2.2. This is a example how to use this service
 
+```sh
 script:
   viettel_reading_08:
     sequence:  
@@ -36,6 +37,6 @@ script:
         message: "{{ Your text here }}
         voice_type: 'nu_mien_nam_1'    
         speed: '1.0'  
-
+```
 
 Thank you!
